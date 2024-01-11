@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        margin: 0;
+      }
+  
+      .hive-container {
+        position: relative;
+        width: 300px;
+        height: 520px;
+        perspective: 500px;
+      }
+  
+      .hex-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transform: rotateX(60deg);
+      }
+  
+      .hexagon {
+        position: absolute;
+        width: 100px;
+        height: 57.74px;
+        margin: -28.87px 0;
+      }
+  
+      .hexagon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+  
+      .hexagon:nth-child(odd) {
+        transform: translateX(50%);
+      }
+  
+      .hexagon:nth-child(odd) img {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+      }
+  
+      .hexagon:nth-child(even) img {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+  
+      .hexagon:nth-child(3n + 1) {
+        transform: translate(0, 115%);
+      }
+  
+      .hexagon:nth-child(3n + 2) {
+        transform: translate(50%, 115%);
+      }
+  
+      .hexagon:nth-child(3n) {
+        transform: translate(-50%, 115%);
+      }
+  </style>
+</head>
+<body>
+    <div class="hive-container">
+<div class="hex-container">
+  <div class="hexagon"><img src="./img/portfolio/Screenshot 2024-01-05 171655.png" alt="Image 1"></div>
+  <div class="hexagon"><img src="./img/portfolio/Screenshot 2024-01-05 171655.png" alt="Image 2"></div>
+  <div class="hexagon"><img src="./img/portfolio/Screenshot 2024-01-05 171655.png" alt="Image 3"></div>
+  <div class="hexagon"><img src="./img/portfolio/Screenshot 2024-01-05 171655.png" alt="Image 4"></div>
+  <div class="hexagon"><img src="./img/portfolio/Screenshot 2024-01-05 171655.png" alt="Image 5"></div>
+</div>
+    </div>
+</body>
+</html>
